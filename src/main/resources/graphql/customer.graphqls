@@ -7,7 +7,7 @@ type Customer {
     grade: Int
     opening_amt: Float!
     receive_amt: Float!
-    payemenet_amt: Float!
+    paymenSt_amt: Float!
     outstanding_amt: Float!
     phone_no: String!
     agent_code: Agent!
