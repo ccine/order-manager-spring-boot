@@ -1,0 +1,8 @@
+type Agent {
+    agent_code: ID!
+    agent_name: String
+    working_area: String
+    commission: Float
+    phone_no: String
+    country: String
+}
