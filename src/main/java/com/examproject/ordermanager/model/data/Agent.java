@@ -1,4 +1,4 @@
-package com.examproject.ordermanager.model;
+package com.examproject.ordermanager.model.data;
 
 import lombok.*;
 

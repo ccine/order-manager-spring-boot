@@ -1,9 +1,8 @@
 package com.examproject.ordermanager.resolver;
 
-import com.examproject.ordermanager.model.Agent;
-import com.examproject.ordermanager.repository.AgentRepository;
+import com.examproject.ordermanager.model.data.Agent;
+import com.examproject.ordermanager.repository.data.AgentRepository;
 import graphql.kickstart.tools.GraphQLQueryResolver;
-import graphql.kickstart.tools.GraphQLResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import java.util.List;

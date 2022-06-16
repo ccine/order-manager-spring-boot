@@ -1,6 +1,6 @@
-package com.examproject.ordermanager.repository;
+package com.examproject.ordermanager.repository.data;
 
-import com.examproject.ordermanager.model.Agent;
+import com.examproject.ordermanager.model.data.Agent;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
