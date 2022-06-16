@@ -1,3 +1,4 @@
 type Query {
-    getAgents: [Agent] # Example query
+    getAgent(agent_code: String): Agent
+    getAgents: [Agent]
 }
