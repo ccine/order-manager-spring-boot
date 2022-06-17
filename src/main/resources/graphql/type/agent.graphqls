@@ -1,5 +1,5 @@
 type Agent {
-    agent_code: ID!
+    agent_code: String!
     agent_name: String
     working_area: String
     commission: Float

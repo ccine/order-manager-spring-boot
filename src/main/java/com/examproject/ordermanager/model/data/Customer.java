@@ -13,7 +13,8 @@ import javax.persistence.*;
 @ToString
 public class Customer {
     @Id
-    private String cust_code;
+    @Column(name = "cust_code")
+    private String custCode;
     @Column(name = "cust_name")
     private String cust_name;
     @Column(name = "cust_city")
@@ -36,6 +37,6 @@ public class Customer {
     private String phone_no;
     @ManyToOne
     @JoinColumn(name = "AGENT_CODE")
-    private Agent agent;
+    private Agent agentCode;
 
 }

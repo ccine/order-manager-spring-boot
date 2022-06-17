@@ -1,6 +1,7 @@
 package com.examproject.ordermanager.resolver;
 
 import com.examproject.ordermanager.model.login.User;
+import com.examproject.ordermanager.model.query.checkUserOutput;
 import com.examproject.ordermanager.repository.login.UserRepository;
 import graphql.kickstart.tools.GraphQLQueryResolver;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,11 +19,11 @@ public class UserResolver implements GraphQLQueryResolver {
         this.userRepository = userRepository;
     }
 
-    public Boolean checkUser(String username, String password) {
+    public checkUserOutput checkUser(String username, String password) {
         List<User> users = userRepository.findByUsername(username);
         if(users.size() == 1){
-            return users.get(0).getPassword().equals(password);
+            return new checkUserOutput(users.get(0).getPassword().equals(password), users.get(0).getRole());
         }
-        return false;
+        return new checkUserOutput(false, null);
     }
 }

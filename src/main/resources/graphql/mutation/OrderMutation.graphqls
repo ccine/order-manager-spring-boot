@@ -1,0 +1,13 @@
+input orderInput{
+    ordAmount: Float!
+    advanceAmount: Float!
+    ordDate: String!
+    custCode: String!
+    agentCode: String!
+    ordDescription: String!
+}
+
+type Mutation{
+    updateOrder(id: ID!, order: orderInput): Order
+}
+

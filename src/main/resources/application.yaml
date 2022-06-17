@@ -1,0 +1,26 @@
+server:
+  port: 7000
+spring:
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  jpa:
+    generate-ddl : true
+    show-sql : true
+    hibernate:
+      ddl-auto=update: update
+
+
+  # PostgreSQL DB - "ordermanager"
+app:
+  datasource:
+    data:
+      jdbc-url : jdbc:postgresql://localhost:5432/ordermanager
+      username : postgres
+      password : ciao1234
+
+    # PostgreSQL DB - "ordermanager-login"
+    login:
+      jdbc-url : jdbc:postgresql://localhost:5432/ordermanager-login
+      username : postgres
+      password : ciao1234
