@@ -19,6 +19,7 @@ public class UserResolver implements GraphQLQueryResolver {
         this.userRepository = userRepository;
     }
 
+    // Checks if the user (identified by username and password) exists in the database
     public checkUserOutput checkUser(String username, String password) {
         List<User> users = userRepository.findByUsername(username);
         if(users.size() == 1){

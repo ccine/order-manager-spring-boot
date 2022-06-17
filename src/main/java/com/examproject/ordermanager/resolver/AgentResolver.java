@@ -17,10 +17,12 @@ public class AgentResolver implements GraphQLQueryResolver {
         this.agentRepository = agentRepository;
     }
 
+    // Get all agents
     public List<Agent> getAgents() {
         return agentRepository.findAll();
     }
 
+    // Get agent with code "agentCode"
     public Agent getAgent(String agentCode) {
         return agentRepository.findById(agentCode).get();
     }

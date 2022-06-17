@@ -30,6 +30,7 @@ public class OrderResolver implements GraphQLQueryResolver, GraphQLMutationResol
         this.agentRepository = agentRepository;
     }
 
+    // Get all orders managed by the agent with code "agentCode"
     public List<Order> getAgentOrders(String agentCode){
         Optional<Agent> agent = agentRepository.findById(agentCode);
         if(agent.isPresent())
@@ -37,6 +38,7 @@ public class OrderResolver implements GraphQLQueryResolver, GraphQLMutationResol
         return null;
     }
 
+    // Get all orders done by the customer with code "custCode"
     public List<Order> getCustomerOrders(String custCode){
         Optional<Customer> customer = customerRepository.findById(custCode);
         if(customer.isPresent())
@@ -44,10 +46,12 @@ public class OrderResolver implements GraphQLQueryResolver, GraphQLMutationResol
         return null;
     }
 
+    // Get all orders
     public List<Order> getAllOrders(){
         return orderRepository.findAll();
     }
 
+    // Modify an existing order with order number "ordNum"
     public Order updateOrder(int ordNum, OrderInput order){
         Optional<Order> oldOrder = orderRepository.findById(ordNum);
         Optional<Agent> agent = agentRepository.findById(order.getAgentCode());
