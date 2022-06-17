@@ -1,14 +1,14 @@
 type Customer {
-    cust_code: String!
-    cust_name: String!
-    cust_city: String
-    working_area: String!
-    cust_country: String!
+    custCode: String!
+    custName: String!
+    custCity: String
+    workingArea: String!
+    custCountry: String!
     grade: Int
-    opening_amt: Float!
-    receive_amt: Float!
-    payment_amt: Float!
-    outstanding_amt: Float!
-    phone_no: String!
-    agent_code: Agent!
+    openingAmt: Float!
+    receiveAmt: Float!
+    paymentAmt: Float!
+    outstandingAmt: Float!
+    phoneNo: String!
+    agentCode: Agent!
 }

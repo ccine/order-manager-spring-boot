@@ -11,6 +11,6 @@ import java.util.List;
 @Repository
 public interface OrderRepository extends JpaRepository<Order, Integer> {
 
-    List<Order> findByAgentCode(Agent agent_code);
-    List<Order> findByCustCode(Customer cust_code);
+    List<Order> findByAgentCode(Agent agentCode);
+    List<Order> findByCustCode(Customer custCode);
 }

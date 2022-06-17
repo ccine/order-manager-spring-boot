@@ -8,6 +8,6 @@ input orderInput{
 }
 
 type Mutation{
-    updateOrder(id: ID!, order: orderInput): Order
+    updateOrder(ordNum: ID!, order: orderInput!): Order
 }
 

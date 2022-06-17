@@ -18,11 +18,11 @@ public class Order {
     @Column(name = "ord_num")
     private int ordNum;
     @Column(name = "ord_amount")
-    private Float ord_amount;
+    private Float ordAmount;
     @Column(name = "advance_amount")
-    private Float advance_amount;
+    private Float advanceAmount;
     @Column(name = "ord_date")
-    private Date ord_date;
+    private Date ordDate;
     @ManyToOne
     @JoinColumn(name = "cust_code")
     private Customer custCode;
@@ -30,6 +30,6 @@ public class Order {
     @JoinColumn(name = "agent_code")
     private Agent agentCode;
     @Column(name = "ord_description")
-    private String ord_description;
+    private String ordDescription;
 
 }

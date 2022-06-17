@@ -18,8 +18,4 @@ public class OrderInput {
     private String custCode;
     private String agentCode;
     private String ordDescription;
-
-    public String getAgentCode() {
-        return agentCode;
-    }
 }

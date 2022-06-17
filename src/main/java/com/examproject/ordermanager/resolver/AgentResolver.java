@@ -21,7 +21,7 @@ public class AgentResolver implements GraphQLQueryResolver {
         return agentRepository.findAll();
     }
 
-    public Agent getAgent(String agent_code) {
-        return agentRepository.findById(agent_code).get();
+    public Agent getAgent(String agentCode) {
+        return agentRepository.findById(agentCode).get();
     }
 }

@@ -18,16 +18,16 @@ public class Agent {
     private String agentCode;
 
     @Column(name = "agent_name")
-    private String agent_name;
+    private String agentName;
 
     @Column(name = "working_area")
-    private String working_area;
+    private String workingArea;
 
     @Column(name = "commission")
     private Float commission;
 
     @Column(name = "phone_no")
-    private String phone_no;
+    private String phoneNo;
 
     @Column(name = "country")
     private String country;

@@ -30,15 +30,15 @@ public class OrderResolver implements GraphQLQueryResolver, GraphQLMutationResol
         this.agentRepository = agentRepository;
     }
 
-    public List<Order> getAgentOrders(String agent_code){
-        Optional<Agent> agent = agentRepository.findById(agent_code);
+    public List<Order> getAgentOrders(String agentCode){
+        Optional<Agent> agent = agentRepository.findById(agentCode);
         if(agent.isPresent())
             return orderRepository.findByAgentCode(agent.get());
         return null;
     }
 
-    public List<Order> getCustomerOrders(String cust_code){
-        Optional<Customer> customer = customerRepository.findById(cust_code);
+    public List<Order> getCustomerOrders(String custCode){
+        Optional<Customer> customer = customerRepository.findById(custCode);
         if(customer.isPresent())
             return orderRepository.findByCustCode(customer.get());
         return null;
@@ -48,23 +48,16 @@ public class OrderResolver implements GraphQLQueryResolver, GraphQLMutationResol
         return orderRepository.findAll();
     }
 
-    public Order updateOrder(int ord_num, OrderInput order){
-        Optional<Order> oldOrder = orderRepository.findById(ord_num);
+    public Order updateOrder(int ordNum, OrderInput order){
+        Optional<Order> oldOrder = orderRepository.findById(ordNum);
+        Optional<Agent> agent = agentRepository.findById(order.getAgentCode());
+        Optional<Customer> customer = customerRepository.findById(order.getCustCode());
 
-        if(order != null) {
-            System.out.println(order);
-            Optional<Agent> agent = agentRepository.findById(order.getAgentCode());
-            Optional<Customer> customer = customerRepository.findById(order.getCustCode());
-
-            if(oldOrder.isPresent() && agent.isPresent() && customer.isPresent()){
-                Order modifiedOrder = new Order(ord_num, order.getOrdAmount(), order.getAdvanceAmount(), order.getOrdDate(), customer.get(), agent.get(), order.getOrdDescription());
-                orderRepository.save(modifiedOrder);
-                return modifiedOrder;
-            }
-
+        if(oldOrder.isPresent() && agent.isPresent() && customer.isPresent()){
+            Order modifiedOrder = new Order(ordNum, order.getOrdAmount(), order.getAdvanceAmount(), order.getOrdDate(), customer.get(), agent.get(), order.getOrdDescription());
+            orderRepository.save(modifiedOrder);
+            return modifiedOrder;
         }
-
-
         return null;
     }
 

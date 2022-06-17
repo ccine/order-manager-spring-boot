@@ -1,8 +1,8 @@
 type Agent {
-    agent_code: String!
-    agent_name: String
-    working_area: String
+    agentCode: String!
+    agentName: String
+    workingArea: String
     commission: Float
-    phone_no: String
+    phoneNo: String
     country: String
 }
