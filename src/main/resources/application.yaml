@@ -24,3 +24,11 @@ app:
       jdbc-url : jdbc:postgresql://localhost:5432/ordermanager-login
       username : postgres
       password : ciao1234
+
+graphql:
+  servlet:
+    cors:
+      allowed-methods: GET, HEAD, POST
+      allowed-origins:
+        - "*"
+        - "http://localhost:3000"
