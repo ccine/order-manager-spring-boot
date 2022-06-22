@@ -24,6 +24,7 @@ public class AgentResolver implements GraphQLQueryResolver {
 
     // Get agent with code "agentCode"
     public Agent getAgent(String agentCode) {
+        if(agentCode == null) return null;
         return agentRepository.findById(agentCode).get();
     }
 }
