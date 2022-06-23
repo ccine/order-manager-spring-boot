@@ -1,0 +1,4 @@
+type Mutation{
+    updateOrder(ordNum: ID!, order: orderInput!): Order
+}
+

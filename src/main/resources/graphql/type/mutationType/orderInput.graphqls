@@ -6,8 +6,3 @@ input orderInput{
     agentCode: String!
     ordDescription: String!
 }
-
-type Mutation{
-    updateOrder(ordNum: ID!, order: orderInput!): Order
-}
-
