@@ -1,10 +1,9 @@
 package com.examproject.ordermanager.model.data;
 
-import com.examproject.ordermanager.model.mutation.OrderInput;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "orders")
@@ -22,7 +21,7 @@ public class Order {
     @Column(name = "advance_amount")
     private Float advanceAmount;
     @Column(name = "ord_date")
-    private Date ordDate;
+    private LocalDate ordDate;
     @ManyToOne
     @JoinColumn(name = "cust_code")
     private Customer custCode;

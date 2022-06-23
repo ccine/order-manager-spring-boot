@@ -3,7 +3,7 @@ package com.examproject.ordermanager.model.mutation;
 import lombok.*;
 
 import javax.persistence.Entity;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @AllArgsConstructor
@@ -14,7 +14,7 @@ import java.util.Date;
 public class OrderInput {
     private Float ordAmount;
     private Float advanceAmount;
-    private Date ordDate;
+    private LocalDate ordDate;
     private String custCode;
     private String agentCode;
     private String ordDescription;
