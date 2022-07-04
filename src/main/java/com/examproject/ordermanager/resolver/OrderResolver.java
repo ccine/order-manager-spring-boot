@@ -68,4 +68,14 @@ public class OrderResolver implements GraphQLQueryResolver, GraphQLMutationResol
         return null;
     }
 
+    // Delete an existing order
+    public Boolean deleteOrder(int ordNum){
+        Optional<Order> order = orderRepository.findById(ordNum);
+        if(order.isPresent()){
+            orderRepository.deleteById(ordNum);
+            return true;
+        }
+        return false;
+    }
+
 }
