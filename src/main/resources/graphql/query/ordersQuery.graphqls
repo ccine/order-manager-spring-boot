@@ -1,5 +1,5 @@
 extend type Query {
-    getOrdersByAgent(agent: String): [Order]
-    getOrdersByCustomer(customer: String): [Order]
+    getOrdersByAgent(agentCode: String): [Order]
+    getOrdersByCustomer(custCode: String): [Order]
     getAllOrders: [Order]
 }
