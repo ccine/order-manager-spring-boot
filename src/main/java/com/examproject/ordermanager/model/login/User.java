@@ -1,6 +1,10 @@
 package com.examproject.ordermanager.model.login;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 
@@ -22,7 +26,6 @@ public class User {
     @Column(name = "password")
     private String password;
 
-    //@Enumerated(EnumType.STRING)
     @Column(name = "role")
     private String role;
 

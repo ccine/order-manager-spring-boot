@@ -1,5 +1,0 @@
-enum Role {
-    MANAGER
-    AGENT
-    CUSTOMER
-}

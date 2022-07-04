@@ -1,12 +1,11 @@
 package com.examproject.ordermanager.model.query;
 
-import com.examproject.ordermanager.model.login.Role;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
-import javax.persistence.Entity;
-
-
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
