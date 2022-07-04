@@ -18,7 +18,7 @@ public class AgentResolver implements GraphQLQueryResolver {
     }
 
     // Get all agents
-    public List<Agent> getAgents() {
+    public List<Agent> getAllAgents() {
         return agentRepository.findAll();
     }
 

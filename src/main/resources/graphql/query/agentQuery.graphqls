@@ -1,4 +1,4 @@
 type Query {
     getAgent(agentCode: String): Agent
-    getAgents: [Agent]
+    getAllAgents: [Agent]
 }
