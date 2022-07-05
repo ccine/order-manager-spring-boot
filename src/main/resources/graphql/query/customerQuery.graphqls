@@ -1,3 +1,4 @@
 extend type Query{
     getCustomersByAgent(agentCode: String!): [Customer]
+    getAllCustomers: [Customer]
 }

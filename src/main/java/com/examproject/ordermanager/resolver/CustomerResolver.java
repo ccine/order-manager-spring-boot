@@ -22,11 +22,16 @@ public class CustomerResolver implements GraphQLQueryResolver {
         this.agentRepository = agentRepository;
     }
 
-    // get all customer managed by the agent
+    // get all customers managed by the agent
     public List<Customer> getCustomersByAgent(String agentCode){
         Optional<Agent> agent = agentRepository.findById(agentCode);
         if(agent.isPresent())
             return customerRepository.findByAgentCode(agent.get());
         return null;
+    }
+
+    // get all customers
+    public List<Customer> getAllCustomers(){
+        return customerRepository.findAll();
     }
 }
