@@ -1,21 +1,9 @@
 server:
   port: 7000
-spring:
-  jackson:
-    serialization:
-      fail-on-empty-beans: false
-  jpa:
-    generate-ddl : true
-    show-sql : true
-    hibernate:
-      ddl-auto=update: update
-  mvc:
-    dispatch-options-request: true
 
-
-  # PostgreSQL DB - "ordermanager"
 app:
   datasource:
+    # PostgreSQL DB - "ordermanager"
     data:
       jdbc-url : jdbc:postgresql://localhost:5432/ordermanager
       username : postgres
@@ -31,8 +19,7 @@ graphql:
   servlet:
     cors:
       allowed-headers: "*"
-      allowed-methods: GET, HEAD, POST
+      allowed-methods: POST
       allowed-origins:
         - "*"
-        - "http://localhost:3000"
 
