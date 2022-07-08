@@ -1,5 +1,5 @@
 type Mutation{
-    updateOrder(ordNum: ID!, order: orderInput!): Order
-    deleteOrder(ordNum: ID!): Boolean
+    updateOrder(ordNum: Int!, order: orderInput!): Order
+    deleteOrder(ordNum: Int!): Boolean
 }
 

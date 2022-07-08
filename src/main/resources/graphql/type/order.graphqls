@@ -1,5 +1,5 @@
 type Order {
-    ordNum: ID!
+    ordNum: Int!
     ordAmount: Float!
     advanceAmount: Float!
     ordDate: String!
